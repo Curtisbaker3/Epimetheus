@@ -15,6 +15,7 @@ export default class App extends React.Component {
 
     handleClick() {
         var name = document.getElementById('name').value;
+        // This calls the server to register a user! d
         Meteor.call('registerUser', name, this.callThisWhenFinished.bind(this));
     }
 
